@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-    text-align: center;
+    text-align: center; /* wyśrodkowanie tekstu */
     background-color: #1a1a1a; /* ciemnoszare tło kontenera */
     padding: 20px;
     border-radius: 8px;
@@ -35,7 +35,9 @@ h1 {
 }
 
 .link {
-    display: inline-block;
+    display: flex; /* umożliwia wyśrodkowanie ikony i tekstu */
+    align-items: center; /* centrowanie pionowe */
+    justify-content: center; /* centrowanie poziome */
     background-color: #4CAF50; /* kolor przycisku */
     color: white;
     padding: 10px 15px;
@@ -49,13 +51,7 @@ h1 {
     background-color: #45a049; /* ciemniejszy kolor przycisku po najechaniu */
 }
 
-.spotify {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.spotify i {
+.spotify i, .instagram i {
     margin-right: 8px; /* odstęp między ikoną a tekstem */
     font-size: 20px; /* rozmiar ikony */
 }
