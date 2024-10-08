@@ -32,27 +32,29 @@ h1 {
 }
 
 .links {
+    display: flex; /* użycie flexboxa do wyświetlania w poziomie */
+    justify-content: center; /* centrowanie linków */
     margin-top: 20px;
 }
 
 .link {
-    display: flex; /* umożliwia wyśrodkowanie ikony i tekstu */
+    display: flex; /* umożliwia wyśrodkowanie ikony */
     align-items: center; /* centrowanie pionowe */
     justify-content: center; /* centrowanie poziome */
-    background-color: #4CAF50; /* kolor przycisku */
+    background-color: #4CAF50; /* kolor kwadratu */
     color: white;
-    padding: 10px 15px;
-    margin: 10px 0;
-    text-decoration: none;
-    border-radius: 5px;
+    width: 60px; /* szerokość kwadratu */
+    height: 60px; /* wysokość kwadratu */
+    margin: 0 10px; /* odstęp między kwadratami */
+    border-radius: 10px; /* zaokrąglone rogi */
     transition: background-color 0.3s;
+    text-decoration: none; /* usunięcie podkreślenia */
 }
 
 .link:hover {
-    background-color: #45a049; /* ciemniejszy kolor przycisku po najechaniu */
+    background-color: #45a049; /* ciemniejszy kolor kwadratu po najechaniu */
 }
 
 .link i {
-    margin-right: 8px; /* odstęp między ikoną a tekstem */
-    font-size: 20px; /* rozmiar ikony */
+    font-size: 24px; /* rozmiar ikony */
 }
