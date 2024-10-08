@@ -31,6 +31,8 @@ h1 {
 }
 
 .links {
+    display: flex; /* Umożliwia wyśrodkowanie ikon */
+    flex-direction: column; /* Ustala kierunek kolumny */
     margin-top: 20px;
 }
 
