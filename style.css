@@ -26,13 +26,12 @@ body {
 
 h1 {
     margin-bottom: 10px;
-    font-size: 2em;
+    font-size: 2.5em; /* zwiększenie rozmiaru czcionki */
+    font-family: 'Helvetica', sans-serif; /* użycie czcionki Helvetica */
     color: #4CAF50;
 }
 
 .links {
-    display: flex; /* Umożliwia wyśrodkowanie ikon */
-    flex-direction: column; /* Ustala kierunek kolumny */
     margin-top: 20px;
 }
 
