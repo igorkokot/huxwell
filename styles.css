@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica', sans-serif; /* Użycie czcionki Helvetica dla całej strony */
     background-color: #000; /* czarne tło */
     color: #fff; /* biały tekst */
     display: flex;
@@ -27,8 +27,14 @@ body {
 h1 {
     margin-bottom: 10px;
     font-size: 2.5em; /* zwiększenie rozmiaru czcionki */
-    font-family: 'Helvetica', sans-serif; /* użycie czcionki Helvetica */
     color: #4CAF50;
+}
+
+.profile-image {
+    width: 100px; /* Możesz zmienić rozmiar obrazu */
+    height: auto; /* Automatyczna wysokość, aby zachować proporcje */
+    border-radius: 50%; /* Zaokrąglony obrazek (profil) */
+    margin: 15px 0; /* Marginesy wokół obrazka */
 }
 
 .links {
