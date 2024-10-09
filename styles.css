@@ -31,8 +31,8 @@ h1 {
 }
 
 .profile-image {
-    width: 150px; /* Zwiększenie szerokości obrazka */
-    height: auto; /* Automatyczna wysokość, aby zachować proporcje */
+    width: 500px; /* Ustawienie szerokości obrazka na 500px */
+    height: 500px; /* Ustawienie wysokości obrazka na 500px */
     border-radius: 0; /* Usunięcie zaokrąglenia */
     margin: 15px 0; /* Marginesy wokół obrazka */
 }
