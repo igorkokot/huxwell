@@ -20,8 +20,8 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
-    width: 90%;
-    max-width: 400px; /* Maksymalna szerokość kontenera */
+    width: calc(90% + 100px); /* Szerokość kontenera zwiększona o 50 pikseli z każdej strony */
+    max-width: 500px; /* Maksymalna szerokość kontenera */
 }
 
 h1 {
