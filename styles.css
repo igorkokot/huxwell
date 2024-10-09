@@ -31,9 +31,9 @@ h1 {
 }
 
 .profile-image {
-    width: 100px; /* Możesz zmienić rozmiar obrazu */
+    width: 150px; /* Zwiększenie szerokości obrazka */
     height: auto; /* Automatyczna wysokość, aby zachować proporcje */
-    border-radius: 50%; /* Zaokrąglony obrazek (profil) */
+    border-radius: 0; /* Usunięcie zaokrąglenia */
     margin: 15px 0; /* Marginesy wokół obrazka */
 }
 
