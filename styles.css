@@ -1,27 +1,72 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huxwell</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Huxwell</h1>
-        <img src="1997.jpg" alt="Huxwell" class="profile-image">
-        <p>1997 Out Now!</p>
-        <!-- Osadzony utwór Spotify -->
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5WHERJDfS9vf4h7ZItqy14?utm_source=generator&theme=0" width="75%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <div class="links">
-            <a href="https://www.instagram.com/your_instagram" class="link instagram" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.youtube.com/your_channel" class="link youtube" target="_blank">
-                <i class="fab fa-youtube"></i>
-            </a>
-        </div>
-    </div>
-</body>
-</html>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif; /* Czcionka Helvetica dla całej strony */
+    background-color: #000; /* Czarne tło */
+    color: #fff; /* Biały tekst */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center; /* Wyśrodkowanie tekstu */
+    background-color: #1a1a1a; /* Ciemnoszare tło kontenera */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+    width: 90%;
+    max-width: 400px; /* Maksymalna szerokość kontenera */
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 2.5em; /* Zwiększenie rozmiaru czcionki */
+}
+
+.profile-image {
+    width: 300px; /* Szerokość obrazka */
+    height: 300px; /* Wysokość obrazka */
+    margin: 15px 0; /* Marginesy wokół obrazka */
+}
+
+.links {
+    display: flex; /* Użycie flexboxa do wyświetlania w poziomie */
+    justify-content: center; /* Centrowanie linków */
+    margin-top: 20px;
+}
+
+.link {
+    display: flex; /* Umożliwia wyśrodkowanie ikony */
+    align-items: center; /* Centrowanie pionowe */
+    justify-content: center; /* Centrowanie poziome */
+    color: white;
+    width: 60px; /* Szerokość kwadratu */
+    height: 60px; /* Wysokość kwadratu */
+    margin: 0 10px; /* Odstęp między kwadratami */
+    border-radius: 10px; /* Zaokrąglone rogi */
+    transition: background-color 0.3s;
+    text-decoration: none; /* Usunięcie podkreślenia */
+}
+
+/* Kolory tła dla linków */
+.link.instagram {
+    background: linear-gradient(45deg, #F58529, #F77737, #D62976, #E1306C); /* Gradient Instagram */
+}
+
+.link.youtube {
+    background-color: #FF0000; /* Czerwony kolor tła YouTube */
+}
+
+.link:hover {
+    filter: brightness(90%); /* Efekt przyciemnienia po najechaniu */
+}
+
+.link i {
+    font-size: 24px; /* Rozmiar ikony */
+}
