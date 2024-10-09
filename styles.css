@@ -35,6 +35,10 @@ h1 {
     margin: 15px 0; /* Marginesy wokół obrazka */
 }
 
+p {
+    margin-bottom: 20px; /* Dodanie większego marginesu pod napisem */
+}
+
 .links {
     display: flex; /* Użycie flexboxa do wyświetlania w poziomie */
     justify-content: center; /* Centrowanie linków */
