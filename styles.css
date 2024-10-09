@@ -27,7 +27,7 @@ body {
 h1 {
     margin-bottom: 10px;
     font-size: 2.5em; /* zwiększenie rozmiaru czcionki */
-    color: #4CAF50;
+    color: #ffffff; /* Biały kolor tytułu */
 }
 
 .profile-image {
@@ -47,7 +47,6 @@ h1 {
     display: flex; /* umożliwia wyśrodkowanie ikony */
     align-items: center; /* centrowanie pionowe */
     justify-content: center; /* centrowanie poziome */
-    background-color: #4CAF50; /* kolor kwadratu */
     color: white;
     width: 60px; /* szerokość kwadratu */
     height: 60px; /* wysokość kwadratu */
@@ -57,8 +56,21 @@ h1 {
     text-decoration: none; /* usunięcie podkreślenia */
 }
 
+/* Kolory tła dla linków */
+.link.spotify {
+    background-color: #1DB954; /* Kolor tła Spotify */
+}
+
+.link.instagram {
+    background: linear-gradient(45deg, #F58529, #F77737, #D62976, #E1306C); /* Gradient Instagram */
+}
+
+.link.youtube {
+    background-color: #FF0000; /* Czerwony kolor tła YouTube */
+}
+
 .link:hover {
-    background-color: #45a049; /* ciemniejszy kolor kwadratu po najechaniu */
+    filter: brightness(90%); /* Efekt przyciemnienia po najechaniu */
 }
 
 .link i {
