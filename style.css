@@ -42,6 +42,88 @@ body.dark-mode .top-bar {
     --top-bar-bg: black;
 }
 
+/* Slider */
+.slider {
+    width: 50px; /* Zwiększona szerokość slidera */
+    height: 30px; /* Zwiększona wysokość slidera */
+    border-radius: 20px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.slider-circle {
+    width: 24px; /* Zwiększony rozmiar kółka */
+    height: 24px; /* Zwiększony rozmiar kółka */
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; /* Zwiększona czcionka */
+    transition: transform 0.3s ease;
+}
+
+/* Pozycjonowanie slidera w trybie jasnym i ciemnym */
+body.light-mode .slider-circle {
+    transform: translateX(0);
+}
+
+body.dark-mode .slider-circle {
+    transform: translateX(30px);
+}
+
+/* Ikony socjalne */
+.icon {
+    width: 40px; /* Zwiększona szerokość ikon */
+    height: 40px; /* Zwiększona wysokość ikon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: black;
+    font-size: 24px; /* Zwiększona czcionka ikon */
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    text-decoration: none;
+}
+
+body.dark-mode .icon {
+    color: white;
+    border-color: white;
+}
+
+.icon:hover {
+    background-color: gray;
+}
+
+.icon.instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+}
+
+body.light-mode .icon.instagram:hover {
+    color: black; /* Zatrzymanie koloru czarnego w trybie jasnym po najechaniu */
+}
+
+.icon.bandcamp:hover {
+    background-color: #517C8A;
+}
+
+.icon.spotify:hover {
+    background-color: #1ED760;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px; /* Zwiększona odległość pomiędzy ikonami */
+}
+
 /* Stylizacja napisu "Huxwell" */
 .title {
     font-family: "Bodoni MT Condensed", serif;
