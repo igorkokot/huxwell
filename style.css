@@ -8,6 +8,7 @@ html, body {
     height: 100%;
     font-family: Arial, sans-serif;
     overflow: hidden;
+    transition: background-color 0.3s ease; /* Płynna zmiana tła */
 }
 
 body.light-mode {
@@ -22,14 +23,14 @@ body.dark-mode {
 
 .top-bar {
     width: 100%;
-    height: 100px; /* Dwukrotnie wyższy segment */
-    background-color: var(--top-bar-bg); /* Zmienna kontrolująca kolor tła */
+    height: 50px; /* Zmniejszona wysokość segmentu */
+    background-color: var(--top-bar-bg);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     gap: 20px;
-    border-bottom: 2px solid gray; /* Dolna linia oddzielająca */
+    border-bottom: 2px solid gray;
     transition: background-color 0.3s ease;
 }
 
@@ -44,9 +45,9 @@ body.dark-mode .top-bar {
 
 /* Slider */
 .slider {
-    width: 70px; /* Zwiększono szerokość slidera */
-    height: 40px; /* Zwiększono wysokość slidera */
-    border-radius: 40px;
+    width: 40px; /* Zmniejszona szerokość slidera */
+    height: 20px; /* Zmniejszona wysokość slidera */
+    border-radius: 20px;
     background-color: lightgray;
     display: flex;
     align-items: center;
@@ -57,18 +58,18 @@ body.dark-mode .top-bar {
 }
 
 .slider-circle {
-    width: 34px; /* Zwiększono rozmiar kółka */
-    height: 34px; /* Zwiększono rozmiar kółka */
+    width: 16px; /* Zmniejszony rozmiar kółka */
+    height: 16px; /* Zmniejszony rozmiar kółka */
     background-color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px; /* Większa czcionka dla emoji */
+    font-size: 12px;
     transition: transform 0.3s ease;
     text-align: center;
     line-height: 1;
-    padding-top: 2px; /* Delikatne przesunięcie emoji w dół */
+    padding-top: 2px;
 }
 
 body.light-mode .slider-circle {
@@ -76,50 +77,36 @@ body.light-mode .slider-circle {
 }
 
 body.dark-mode .slider-circle {
-    transform: translateX(40px); /* Przesunięcie dla większego slidera */
+    transform: translateX(20px);
 }
 
-/* Gradient dla ikony Instagram */
-.icon.instagram {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    color: white;
-}
-
-.icon.instagram:hover {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-}
-
-.social-icons {
-    display: flex;
-    gap: 20px; /* Zwiększona przestrzeń między ikonami */
-}
-
+/* Ikony socjalne */
 .icon {
-    width: 50px; /* Zwiększono rozmiar */
-    height: 50px; /* Zwiększono rozmiar */
+    width: 30px; /* Zmniejszony rozmiar */
+    height: 30px; /* Zmniejszony rozmiar */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: lightgray;
+    background-color: transparent; /* Przezroczyste tło */
     color: black;
-    font-size: 24px; /* Większy rozmiar czcionki */
+    font-size: 18px;
+    border: 2px solid black; /* Czarna obramówka */
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     text-decoration: none;
+}
+
+body.dark-mode .icon {
+    color: white; /* Białe ikony */
+    border-color: white; /* Biała obramówka */
 }
 
 .icon:hover {
     background-color: gray;
-    color: white;
 }
 
-.bandcamp {
-    background-color: #629AA9;
-    color: white;
-}
-
-.spotify {
-    background-color: #1DB954;
+.icon.instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     color: white;
 }
 
@@ -131,16 +118,20 @@ body.dark-mode .slider-circle {
     background-color: #1ED760;
 }
 
+.social-icons {
+    display: flex;
+    gap: 10px; /* Zmniejszona przestrzeń między ikonami */
+}
+
 .container {
     display: grid;
     width: 100vw;
-    height: calc(100vh - 100px); /* Odejmujemy wysokość top-bar (100px) */
+    height: calc(100vh - 50px); /* Odejmujemy wysokość top-bar (50px) */
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 20px; /* Odstęp między segmentami */
+    gap: 20px;
     padding: 10px;
     box-sizing: border-box;
-    position: relative;
 }
 
 .segment {
@@ -161,26 +152,19 @@ body.dark-mode .slider-circle {
     background-color: #dcdcdc;
 }
 
-.mode-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 300px;
-    max-height: 300px;
-    width: 100%;
-    height: auto;
-    border-radius: 50%; /* Ustawienie obrazka na kształt koła */
-    object-fit: cover;
+/* Stylizacja napisu "Huxwell" */
+.title {
+    font-family: "Bodoni MT Condensed", serif;
+    font-size: 4rem;
+    letter-spacing: 10px; /* Odstęp między znakami */
+    text-align: center;
+    margin: auto;
+    grid-column: 1 / span 2; /* Napis zajmuje cały górny rząd */
 }
 
 @media (max-width: 1080px) {
     .container {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
-    }
-
-    #mode-image {
-        display: none;
     }
 }
