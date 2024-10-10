@@ -9,19 +9,37 @@ html, body {
     font-family: Arial, sans-serif;
 }
 
-body {
+/* Ustawienia dla trybu jasnego i ciemnego */
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+/* Top-bar (segment na górze strony) */
+.top-bar {
+    width: 100%;
+    padding: 10px;
+    background-color: lightgray;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 0;
-    height: 100vh;
+}
+
+#toggle-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 /* Kontener na segmenty */
 .container {
     display: grid;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 50px); /* Odejmujemy wysokość top-bar */
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 10px;
