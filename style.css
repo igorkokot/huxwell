@@ -74,9 +74,10 @@ body.dark-mode {
     top: 50%; /* Wyśrodkowanie w pionie */
     left: 50%; /* Wyśrodkowanie w poziomie */
     transform: translate(-50%, -50%); /* Przesunięcie o 50% szerokości i wysokości */
-    width: 500px; /* Szerokość grafiki */
-    height: 500px; /* Wysokość grafiki */
-    display: block; /* Umożliwia wyświetlenie grafiki */
+    max-width: 300px; /* Maksymalna szerokość grafiki */
+    max-height: 300px; /* Maksymalna wysokość grafiki */
+    width: 30vw; /* Szerokość grafiki w procentach od szerokości okna */
+    height: auto; /* Utrzymanie proporcji */
 }
 
 /* Responsywność: na ekranach mniejszych lub równych 1080px segmenty będą układać się jeden pod drugim */
@@ -87,6 +88,6 @@ body.dark-mode {
     }
 
     #mode-image {
-        display: none; /* Ukryj grafikę, gdy segmenty są jeden pod drugim */
+        display: none; /* Ukryj grafikę, gdy segmenty są w pionie */
     }
 }
