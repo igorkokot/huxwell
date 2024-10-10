@@ -31,10 +31,48 @@ body.dark-mode {
     align-items: center;
 }
 
-#toggle-button {
-    padding: 10px 20px;
-    font-size: 1rem;
+/* Stylizacje dla suwaka */
+.slider {
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    padding: 3px;
     cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.slider-circle {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+/* Tryb jasny – kółko po lewej */
+body.light-mode .slider {
+    background-color: lightgray;
+}
+
+body.light-mode .slider-circle {
+    transform: translateX(0);
+}
+
+/* Tryb ciemny – kółko po prawej */
+body.dark-mode .slider {
+    background-color: black;
+}
+
+body.dark-mode .slider-circle {
+    transform: translateX(30px);
 }
 
 /* Kontener na segmenty */
