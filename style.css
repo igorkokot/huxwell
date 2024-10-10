@@ -41,41 +41,41 @@ body.dark-mode .top-bar {
     --top-bar-bg: black;
 }
 
-/* Styl slidera */
 .slider {
-    width: 80px;  /* Szerokość slidera */
-    height: 40px;  /* Wysokość slidera */
+    width: 90px; /* Powiększona szerokość slidera */
+    height: 40px; /* Wysokość slidera */
+    border-radius: 40px;
     background-color: lightgray;
-    border-radius: 20px;
-    position: relative;
-    cursor: pointer;
     display: flex;
     align-items: center;
-    padding: 5px;
+    padding: 3px;
+    cursor: pointer;
+    position: relative;
     transition: background-color 0.3s;
 }
 
 .slider-circle {
-    width: 30px;  /* Szerokość kółka */
-    height: 30px;  /* Wysokość kółka */
+    width: 34px; /* Powiększona szerokość kółka */
+    height: 34px; /* Powiększona wysokość kółka */
     background-color: white;
     border-radius: 50%;
-    position: absolute;
-    top: 50%;  /* Pozycjonowanie pionowe */
-    transform: translateY(-50%);  /* Wycentrowanie pionowe */
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 18px;
-    transition: left 0.3s ease;  /* Płynne przesuwanie */
+    justify-content: center;
+    font-size: 18px; /* Rozmiar emoji */
+    transition: transform 0.3s ease;
+    text-align: center;
+    line-height: 1;
+    padding-top: 2px; /* Dostosowanie pozycji emoji */
+    position: relative;
 }
 
 body.light-mode .slider-circle {
-    left: 5px;  /* Pozycja dla jasnego trybu */
+    transform: translateX(0); /* Lewa pozycja w trybie jasnym */
 }
 
 body.dark-mode .slider-circle {
-    left: calc(100% - 35px);  /* Pozycja dla ciemnego trybu (100% - szerokość kółka - padding) */
+    transform: translateX(56px); /* Przesunięcie dla trybu ciemnego */
 }
 
 .icon.instagram {
