@@ -22,17 +22,18 @@ body.dark-mode {
 
 .top-bar {
     width: 100%;
-    height: 100px;
-    background-color: var(--top-bar-bg);
+    height: 100px; /* Dwukrotnie wyższy segment */
+    background-color: var(--top-bar-bg); /* Zmienna kontrolująca kolor tła */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     gap: 20px;
-    border-bottom: 2px solid gray;
+    border-bottom: 2px solid gray; /* Dolna linia oddzielająca */
     transition: background-color 0.3s ease;
 }
 
+/* Kolory top-bar dla różnych trybów */
 body.light-mode .top-bar {
     --top-bar-bg: white;
 }
@@ -41,9 +42,10 @@ body.dark-mode .top-bar {
     --top-bar-bg: black;
 }
 
+/* Slider */
 .slider {
-    width: 90px; /* Powiększona szerokość slidera */
-    height: 40px; /* Wysokość slidera */
+    width: 60px; /* Zwiększono szerokość slidera */
+    height: 40px; /* Zwiększono wysokość slidera */
     border-radius: 40px;
     background-color: lightgray;
     display: flex;
@@ -55,29 +57,29 @@ body.dark-mode .top-bar {
 }
 
 .slider-circle {
-    width: 34px; /* Powiększona szerokość kółka */
-    height: 34px; /* Powiększona wysokość kółka */
+    width: 34px; /* Zwiększono rozmiar kółka */
+    height: 34px; /* Zwiększono rozmiar kółka */
     background-color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px; /* Rozmiar emoji */
+    font-size: 18px; /* Większa czcionka dla emoji */
     transition: transform 0.3s ease;
     text-align: center;
     line-height: 1;
-    padding-top: 2px; /* Dostosowanie pozycji emoji */
-    position: relative;
+    padding-top: 2px; /* Delikatne przesunięcie emoji w dół */
 }
 
 body.light-mode .slider-circle {
-    transform: translateX(0); /* Lewa pozycja w trybie jasnym */
+    transform: translateX(0);
 }
 
 body.dark-mode .slider-circle {
-    transform: translateX(56px); /* Przesunięcie dla trybu ciemnego */
+    transform: translateX(40px); /* Przesunięcie dla większego slidera */
 }
 
+/* Gradient dla ikony Instagram */
 .icon.instagram {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     color: white;
@@ -89,18 +91,18 @@ body.dark-mode .slider-circle {
 
 .social-icons {
     display: flex;
-    gap: 20px;
+    gap: 20px; /* Zwiększona przestrzeń między ikonami */
 }
 
 .icon {
-    width: 50px;
-    height: 50px;
+    width: 50px; /* Zwiększono rozmiar */
+    height: 50px; /* Zwiększono rozmiar */
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: lightgray;
     color: black;
-    font-size: 24px;
+    font-size: 24px; /* Większy rozmiar czcionki */
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
     text-decoration: none;
@@ -132,10 +134,10 @@ body.dark-mode .slider-circle {
 .container {
     display: grid;
     width: 100vw;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 100px); /* Odejmujemy wysokość top-bar (100px) */
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 20px;
+    gap: 20px; /* Odstęp między segmentami */
     padding: 10px;
     box-sizing: border-box;
     position: relative;
@@ -168,7 +170,7 @@ body.dark-mode .slider-circle {
     max-height: 300px;
     width: 100%;
     height: auto;
-    border-radius: 50%;
+    border-radius: 50%; /* Ustawienie obrazka na kształt koła */
     object-fit: cover;
 }
 
