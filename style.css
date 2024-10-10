@@ -45,7 +45,7 @@ body.dark-mode .top-bar {
 
 /* Slider */
 .slider {
-    width: 60px; /* Zwiększona szerokość */
+    width: 70px; /* Zwiększona szerokość */
     height: 30px; /* Zwiększona wysokość */
     border-radius: 20px;
     background-color: lightgray;
