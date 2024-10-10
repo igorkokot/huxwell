@@ -46,8 +46,8 @@ body {
     background-color: #dcdcdc;
 }
 
-/* Responsywność: na małych ekranach segmenty będą układać się jeden pod drugim */
-@media (max-width: 600px) {
+/* Responsywność: na ekranach mniejszych lub równych 1080px segmenty będą układać się jeden pod drugim */
+@media (max-width: 1080px) {
     .container {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
