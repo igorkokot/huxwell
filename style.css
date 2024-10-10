@@ -4,23 +4,32 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    height: 100%;
     font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
 }
 
 /* Kontener na segmenty */
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 10px;
     padding: 10px;
 }
 
 /* Segmenty */
 .segment {
-    flex: 1 1 calc(50% - 20px); /* 50% szerokości - margines */
-    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,7 +48,8 @@ body {
 
 /* Responsywność: na małych ekranach segmenty będą układać się jeden pod drugim */
 @media (max-width: 600px) {
-    .segment {
-        flex: 1 1 100%;
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
     }
 }
