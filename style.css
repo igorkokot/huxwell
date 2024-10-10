@@ -41,41 +41,41 @@ body.dark-mode .top-bar {
     --top-bar-bg: black;
 }
 
+/* Styl slidera */
 .slider {
-    width: 90px; /* Zwiększona szerokość slidera */
-    height: 40px; /* Wysokość slidera */
-    border-radius: 40px;
+    width: 100px;  /* Szerokość slidera */
+    height: 40px;  /* Wysokość slidera */
     background-color: lightgray;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    padding: 3px;
-    cursor: pointer;
-    position: relative;
+    padding: 5px;
     transition: background-color 0.3s;
 }
 
 .slider-circle {
-    width: 34px; /* Rozmiar kółka */
-    height: 34px; /* Rozmiar kółka */
+    width: 30px;  /* Szerokość kółka */
+    height: 30px;  /* Wysokość kółka */
     background-color: white;
     border-radius: 50%;
+    position: absolute;
+    top: 50%;  /* Pozycjonowanie pionowe */
+    transform: translateY(-50%);  /* Wycentrowanie pionowe */
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     font-size: 18px;
-    transition: transform 0.3s ease;
-    text-align: center;
-    line-height: 1;
-    padding-top: 2px; /* Dostosowanie pozycji emoji */
-    position: relative;
+    transition: left 0.3s ease;  /* Płynne przesuwanie */
 }
 
 body.light-mode .slider-circle {
-    transform: translateX(0);
+    left: 5px;  /* Pozycja dla jasnego trybu */
 }
 
 body.dark-mode .slider-circle {
-    transform: translateX(56px); /* Dokładne przesunięcie dla ciemnego trybu */
+    left: calc(100% - 35px);  /* Pozycja dla ciemnego trybu (100% - szerokość kółka - padding) */
 }
 
 .icon.instagram {
