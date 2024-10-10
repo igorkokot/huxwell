@@ -23,7 +23,7 @@ body.dark-mode {
 
 .top-bar {
     width: 100%;
-    height: 60px; /* Zwiększona wysokość */
+    height: 70px; /* Zwiększona wysokość banera */
     background-color: var(--top-bar-bg);
     display: flex;
     justify-content: space-between;
@@ -45,8 +45,8 @@ body.dark-mode .top-bar {
 
 /* Slider */
 .slider {
-    width: 70px; /* Zwiększona szerokość */
-    height: 30px; /* Zwiększona wysokość */
+    width: 60px; /* Zwiększona szerokość slidera */
+    height: 30px; /* Zwiększona wysokość slidera */
     border-radius: 20px;
     background-color: lightgray;
     display: flex;
@@ -65,13 +65,13 @@ body.dark-mode .top-bar {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 16px; /* Zwiększona czcionka */
     transition: transform 0.3s ease;
     text-align: center;
     line-height: 1;
-    padding-top: 2px;
 }
 
+/* Pozycjonowanie slidera w trybie jasnym i ciemnym */
 body.light-mode .slider-circle {
     transform: translateX(0);
 }
@@ -82,15 +82,15 @@ body.dark-mode .slider-circle {
 
 /* Ikony socjalne */
 .icon {
-    width: 40px; /* Zwiększona szerokość */
-    height: 40px; /* Zwiększona wysokość */
+    width: 40px; /* Zwiększona szerokość ikon */
+    height: 40px; /* Zwiększona wysokość ikon */
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: transparent;
     color: black;
-    font-size: 24px; /* Zwiększona czcionka */
-    border: 2px solid black; /* Czarna obramówka w trybie jasnym */
+    font-size: 24px; /* Zwiększona czcionka ikon */
+    border: 2px solid black;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     text-decoration: none;
@@ -98,7 +98,7 @@ body.dark-mode .slider-circle {
 
 body.dark-mode .icon {
     color: white;
-    border-color: white; /* Biała obramówka w trybie ciemnym */
+    border-color: white;
 }
 
 .icon:hover {
@@ -124,27 +124,21 @@ body.light-mode .icon.instagram:hover {
 
 .social-icons {
     display: flex;
-    gap: 10px;
+    gap: 15px; /* Zwiększona odległość pomiędzy ikonami */
 }
 
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    display: grid;
     width: 100vw;
-    height: calc(100vh - 60px); /* Odejmujemy wysokość top-bar (60px) */
+    height: calc(100vh - 70px); /* Odejmujemy wysokość top-bar (70px) */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
 }
 
-.title {
-    font-family: "Bodoni MT Condensed", serif;
-    font-size: 4rem;
-    letter-spacing: 10px;
-    position: absolute; /* Aby centralnie wyśrodkować napis */
-    text-align: center;
-}
-
-/* Stylizacja segmentów */
 .segment {
     display: flex;
     align-items: center;
@@ -155,47 +149,29 @@ body.light-mode .icon.instagram:hover {
     text-decoration: none;
     color: black;
     transition: background-color 0.3s;
-    width: 150px; /* Ustalona szerokość segmentów */
-    height: 100px; /* Ustalona wysokość segmentów */
+    width: 100%;
+    height: 100%;
 }
 
 .segment:hover {
     background-color: #dcdcdc;
 }
 
-/* Stylizacja okręgów */
-.circle {
-    position: absolute;
-    width: 100px; /* Ustalona średnica okręgów */
-    height: 100px; /* Ustalona średnica okręgów */
-    background-color: transparent;
-    border-radius: 50%;
-    border: 2px solid lightgray; /* Kolor okręgów */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-
-.top-left-circle {
-    top: 0;
-    left: 0;
-}
-
-.bottom-left-circle {
-    bottom: 0;
-    left: 0;
-}
-
-.bottom-right-circle {
-    bottom: 0;
-    right: 0;
-}
-
-.top-right-circle {
-    top: 0;
-    right: 0;
+/* Stylizacja napisu "Huxwell" */
+.title {
+    font-family: "Bodoni MT Condensed", serif;
+    font-size: 4rem;
+    letter-spacing: 10px;
+    text-align: center;
+    margin: auto;
+    grid-column: 1 / span 2; /* Napis zajmuje środkową pozycję */
+    align-self: center; /* Wycentrowanie pionowe */
+    justify-self: center; /* Wycentrowanie poziome */
 }
 
 @media (max-width: 1080px) {
     .container {
-        flex-direction: column; /* Zmiana kierunku flex w mniejszych oknach */
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
     }
 }
