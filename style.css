@@ -56,6 +56,7 @@ body.dark-mode {
     font-size: 16px;
     transition: transform 0.3s ease;
     text-align: center;
+    transform: translateY(-2px); /* Przesunięcie emoji o 2 piksele do góry */
 }
 
 body.light-mode .slider {
