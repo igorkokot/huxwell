@@ -131,8 +131,9 @@ body.dark-mode .slider-circle {
     height: calc(100vh - 50px);
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 10px;
+    gap: 20px; /* Zwiększyłem odstęp między segmentami dla lepszej symetrii */
     padding: 10px;
+    box-sizing: border-box;
     position: relative;
 }
 
@@ -146,8 +147,8 @@ body.dark-mode .slider-circle {
     text-decoration: none;
     color: black;
     transition: background-color 0.3s;
-    width: calc(100% - 100px); /* Zmniejszenie szerokości o 100px */
-    height: calc(100% - 100px); /* Zmniejszenie wysokości o 100px */
+    width: 100%; /* Pełna szerokość siatki */
+    height: 100%; /* Pełna wysokość siatki */
 }
 
 .segment:hover {
@@ -159,12 +160,12 @@ body.dark-mode .slider-circle {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 200px;
-    max-height: 200px;
-    width: 20vw;
-    height: auto;
+    max-width: 300px; /* Maksymalna szerokość obrazka */
+    max-height: 300px; /* Maksymalna wysokość obrazka */
+    width: 100%; /* Użyj dostępnej szerokości */
+    height: auto; /* Zachowaj proporcje */
     border-radius: 50%; /* Kształt koła */
-    object-fit: cover; /* Dopasowanie obrazu w kształcie koła */
+    object-fit: cover; /* Dopasowanie obrazu */
 }
 
 @media (max-width: 1080px) {
