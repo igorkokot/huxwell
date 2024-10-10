@@ -23,13 +23,12 @@ body.dark-mode {
 
 .top-bar {
     width: 100%;
-    height: 70px; /* Zwiększona wysokość banera */
+    height: 70px; /* Wysokość banera */
     background-color: var(--top-bar-bg);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    gap: 20px;
     border-bottom: 2px solid gray;
     transition: background-color 0.3s ease;
 }
@@ -43,135 +42,21 @@ body.dark-mode .top-bar {
     --top-bar-bg: black;
 }
 
-/* Slider */
-.slider {
-    width: 50px; /* Zwiększona szerokość slidera */
-    height: 30px; /* Zwiększona wysokość slidera */
-    border-radius: 20px;
-    background-color: lightgray;
-    display: flex;
-    align-items: center;
-    padding: 3px;
-    cursor: pointer;
-    position: relative;
-    transition: background-color 0.3s;
-}
-
-.slider-circle {
-    width: 24px; /* Zwiększony rozmiar kółka */
-    height: 24px; /* Zwiększony rozmiar kółka */
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px; /* Zwiększona czcionka */
-    transition: transform 0.3s ease;
-    text-align: center;
-    line-height: 1;
-}
-
-/* Pozycjonowanie slidera w trybie jasnym i ciemnym */
-body.light-mode .slider-circle {
-    transform: translateX(0);
-}
-
-body.dark-mode .slider-circle {
-    transform: translateX(30px);
-}
-
-/* Ikony socjalne */
-.icon {
-    width: 40px; /* Zwiększona szerokość ikon */
-    height: 40px; /* Zwiększona wysokość ikon */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    color: black;
-    font-size: 24px; /* Zwiększona czcionka ikon */
-    border: 2px solid black;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    text-decoration: none;
-}
-
-body.dark-mode .icon {
-    color: white;
-    border-color: white;
-}
-
-.icon:hover {
-    background-color: gray;
-}
-
-.icon.instagram:hover {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    color: white;
-}
-
-body.light-mode .icon.instagram:hover {
-    color: black; /* Zatrzymanie koloru czarnego w trybie jasnym po najechaniu */
-}
-
-.icon.bandcamp:hover {
-    background-color: #517C8A;
-}
-
-.icon.spotify:hover {
-    background-color: #1ED760;
-}
-
-.social-icons {
-    display: flex;
-    gap: 15px; /* Zwiększona odległość pomiędzy ikonami */
-}
-
-.container {
-    display: grid;
-    width: 100vw;
-    height: calc(100vh - 70px); /* Odejmujemy wysokość top-bar (70px) */
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
-    padding: 10px;
-    box-sizing: border-box;
-    position: relative;
-}
-
-.segment {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: lightgray;
-    border: 1px solid #ccc;
-    font-size: 2rem;
-    text-decoration: none;
-    color: black;
-    transition: background-color 0.3s;
-    width: 100%;
-    height: 100%;
-}
-
-.segment:hover {
-    background-color: #dcdcdc;
-}
-
 /* Stylizacja napisu "Huxwell" */
 .title {
     font-family: "Bodoni MT Condensed", serif;
     font-size: 4rem;
     letter-spacing: 10px;
     text-align: center;
-    margin: auto;
-    grid-column: 1 / span 2; /* Napis zajmuje środkową pozycję */
-    align-self: center; /* Wycentrowanie pionowe */
-    justify-self: center; /* Wycentrowanie poziome */
+    margin: 0;
+    height: calc(100vh - 70px); /* Wysokość pomiędzy banerem a dolną częścią */
+    display: flex;
+    align-items: center; /* Wyśrodkowanie w pionie */
+    justify-content: center; /* Wyśrodkowanie w poziomie */
 }
 
 @media (max-width: 1080px) {
-    .container {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
+    .title {
+        font-size: 3rem; /* Zmniejszenie rozmiaru czcionki na mniejszych ekranach */
     }
 }
