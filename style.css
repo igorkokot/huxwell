@@ -23,7 +23,7 @@ body.dark-mode {
 .top-bar {
     width: 100%;
     height: 100px; /* Dwukrotnie wyższy segment */
-    background-color: var(--top-bar-bg); /* Zmienna kontrolująca kolor tła */
+    background-color: var(--top-bar-bg);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,8 +44,8 @@ body.dark-mode .top-bar {
 
 /* Slider */
 .slider {
-    width: 80px; /* Zwiększono szerokość slidera */
-    height: 40px; /* Zwiększono wysokość slidera */
+    width: 80px; /* Szerokość slidera */
+    height: 40px; /* Wysokość slidera */
     border-radius: 40px;
     background-color: lightgray;
     display: flex;
@@ -57,8 +57,8 @@ body.dark-mode .top-bar {
 }
 
 .slider-circle {
-    width: 34px; /* Zwiększono rozmiar kółka */
-    height: 34px; /* Zwiększono rozmiar kółka */
+    width: 34px; /* Rozmiar kółka */
+    height: 34px; /* Rozmiar kółka */
     background-color: white;
     border-radius: 50%;
     display: flex;
@@ -68,7 +68,8 @@ body.dark-mode .top-bar {
     transition: transform 0.3s ease;
     text-align: center;
     line-height: 1;
-    padding-top: 2px; /* Delikatne przesunięcie emoji w dół */
+    padding-top: 2px; /* Dostosowane przesunięcie emoji */
+    position: relative; /* Umożliwia przesunięcie w sliderze */
 }
 
 body.light-mode .slider-circle {
@@ -76,7 +77,7 @@ body.light-mode .slider-circle {
 }
 
 body.dark-mode .slider-circle {
-    transform: translateX(40px); /* Przesunięcie dla większego slidera */
+    transform: translateX(calc(80px - 34px)); /* Ustalanie, by kółko dotykało prawej krawędzi */
 }
 
 /* Gradient dla ikony Instagram */
