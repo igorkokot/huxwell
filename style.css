@@ -1,4 +1,36 @@
-/* Stylizacje dla suwaka */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.top-bar {
+    width: 100%;
+    height: 50px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+}
+
 .slider {
     width: 60px;
     height: 30px;
@@ -12,7 +44,34 @@
     transition: background-color 0.3s;
 }
 
-/* Stylizacje dla ikon społecznościowych */
+.slider-circle {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+body.light-mode .slider {
+    background-color: lightgray;
+}
+
+body.light-mode .slider-circle {
+    transform: translateX(0);
+}
+
+body.dark-mode .slider {
+    background-color: black;
+}
+
+body.dark-mode .slider-circle {
+    transform: translateX(30px);
+}
+
 .social-icons {
     display: flex;
     gap: 10px;
@@ -38,7 +97,6 @@
     color: white;
 }
 
-/* Stylizacja dla indywidualnych serwisów */
 .instagram {
     background-color: #E1306C;
     color: white;
@@ -54,7 +112,6 @@
     color: white;
 }
 
-/* Efekt hover dla indywidualnych serwisów */
 .icon.instagram:hover {
     background-color: #C13584;
 }
@@ -67,14 +124,51 @@
     background-color: #1ED760;
 }
 
-/* Dostosowanie paska narzędzi */
-.top-bar {
-    width: 100%;
-    height: 50px;
-    background-color: lightgray;
+.container {
+    display: grid;
+    width: 100vw;
+    height: calc(100vh - 50px);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+.segment {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 0 20px;
-    gap: 20px;
+    justify-content: center;
+    background-color: lightgray;
+    border: 1px solid #ccc;
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s;
+}
+
+.segment:hover {
+    background-color: #dcdcdc;
+}
+
+.mode-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 200px;
+    max-height: 200px;
+    width: 20vw;
+    height: auto;
+}
+
+@media (max-width: 1080px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    #mode-image {
+        display: none;
+    }
 }
