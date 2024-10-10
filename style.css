@@ -74,9 +74,9 @@ body.dark-mode {
     top: 50%; /* Wyśrodkowanie w pionie */
     left: 50%; /* Wyśrodkowanie w poziomie */
     transform: translate(-50%, -50%); /* Przesunięcie o 50% szerokości i wysokości */
-    max-width: 300px; /* Maksymalna szerokość grafiki */
-    max-height: 300px; /* Maksymalna wysokość grafiki */
-    width: 30vw; /* Szerokość grafiki w procentach od szerokości okna */
+    max-width: 200px; /* Maksymalna szerokość grafiki */
+    max-height: 200px; /* Maksymalna wysokość grafiki */
+    width: 20vw; /* Szerokość grafiki w procentach od szerokości okna */
     height: auto; /* Utrzymanie proporcji */
 }
 
