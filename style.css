@@ -144,9 +144,8 @@ body.light-mode .icon.instagram:hover {
     text-align: center;
 }
 
-/* Stylizacja segmentów z wycięciami */
+/* Stylizacja segmentów */
 .segment {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -156,28 +155,43 @@ body.light-mode .icon.instagram:hover {
     text-decoration: none;
     color: black;
     transition: background-color 0.3s;
-    width: 100px; /* Ustalona szerokość segmentów */
+    width: 150px; /* Ustalona szerokość segmentów */
     height: 100px; /* Ustalona wysokość segmentów */
-}
-
-.segment.top-left {
-    border-top-left-radius: 100px; /* Wycięcie w lewym górnym rogu */
-}
-
-.segment.top-right {
-    border-top-right-radius: 100px; /* Wycięcie w prawym górnym rogu */
-}
-
-.segment.bottom-left {
-    border-bottom-left-radius: 100px; /* Wycięcie w lewym dolnym rogu */
-}
-
-.segment.bottom-right {
-    border-bottom-right-radius: 100px; /* Wycięcie w prawym dolnym rogu */
 }
 
 .segment:hover {
     background-color: #dcdcdc;
+}
+
+/* Stylizacja okręgów */
+.circle {
+    position: absolute;
+    width: 100px; /* Ustalona średnica okręgów */
+    height: 100px; /* Ustalona średnica okręgów */
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid lightgray; /* Kolor okręgów */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.top-left-circle {
+    top: 0;
+    left: 0;
+}
+
+.bottom-left-circle {
+    bottom: 0;
+    left: 0;
+}
+
+.bottom-right-circle {
+    bottom: 0;
+    right: 0;
+}
+
+.top-right-circle {
+    top: 0;
+    right: 0;
 }
 
 @media (max-width: 1080px) {
