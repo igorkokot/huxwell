@@ -67,7 +67,7 @@ body.dark-mode .top-bar {
     font-size: 16px; /* Zwiększona czcionka */
     transition: transform 0.3s ease;
     text-align: center;
-    line-height: 1;
+    /*line-height: 1;*/
 }
 
 /* Pozycjonowanie slidera w trybie jasnym i ciemnym */
