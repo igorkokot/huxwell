@@ -104,17 +104,8 @@ body.dark-mode .icon {
     background-color: gray;
 }
 
-.icon.instagram {
-    transition: background-color 0.3s ease; /* Add transition for smooth color change */
-}
-
 .icon.instagram:hover {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    color: white;
-}
-
-body.light-mode .icon.instagram:hover {
-    color: black; /* Zatrzymanie koloru czarnego w trybie jasnym po najechaniu */
+    background-color: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
 
 .icon.bandcamp:hover {
