@@ -1,0 +1,420 @@
+/* ============================================
+   HUXWELL – huxwell.css
+   Cleaned: Webflow boilerplate removed
+   ============================================ */
+
+/* ── Reset ───────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+h1 { margin-top: 20px; font-size: 38px; line-height: 44px; }
+h2 { margin-top: 20px; font-size: 32px; line-height: 36px; }
+h3 { margin-top: 20px; font-size: 24px; line-height: 30px; }
+h4 { margin-top: 10px; font-size: 18px; line-height: 24px; }
+h5 { margin-top: 10px; font-size: 14px; line-height: 20px; }
+h6 { margin-top: 10px; font-size: 12px; line-height: 18px; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+/* ── Base button (Webflow w-button) ──────── */
+
+.w-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #3898ec;
+  border: 0;
+  border-radius: 0;
+  padding: 9px 15px;
+  text-decoration: none;
+  display: inline-block;
+  line-height: inherit;
+}
+
+/* ── Body background ─────────────────────── */
+
+.body {
+  background-image: url("../images/background.jpg");
+  background-position: 0 0;
+  background-size: auto;
+}
+
+/* ── Typography ──────────────────────────── */
+
+.text-block {
+  color: #fff;
+  text-align: center;
+  font-family: 'Bodoni Moda', sans-serif;
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 400;
+  display: inline-flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: baseline;
+}
+
+.heading {
+  color: #fff;
+  margin: 5px 0 15px;
+  font-size: 36px;
+}
+
+.heading-2 {
+  color: #fff;
+}
+
+.heading-3 {
+  color: #fff;
+  margin-left: 0;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.heading-4 {
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.text-block-2 {
+  color: #fff;
+}
+
+/* ── Buttons ─────────────────────────────── */
+
+.button {
+  text-align: center;
+  background-color: #629aa9;
+  font-family: 'Oswald', sans-serif;
+  display: inline-block;
+}
+
+.button.spotify {
+  background-color: #1db954;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.button.bandcamp {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 20px;
+}
+
+.button.soundcloud {
+  background-color: #ff8700;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 20px;
+}
+
+.button.instagram {
+  background-color: #e1306c;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 20px;
+}
+
+/* ── Sections ────────────────────────────── */
+
+/* Streaming buttons row */
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  margin: 10px;
+  font-size: 20px;
+}
+
+/* Latest release wrapper */
+.section-2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  margin: 0;
+}
+
+/* Text content inside release */
+.section-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+}
+
+/* Latest release outer section */
+.section-5 {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  margin: 20px 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Contact */
+.section-4 {
+  margin: 10px;
+}
+
+/* ── Blocks ──────────────────────────────── */
+
+.div-block {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.div-block-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}
+
+.div-block-3 {
+  height: 300px;
+  padding: 15px;
+}
+
+/* ── Images ──────────────────────────────── */
+
+.image,
+.links {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.image-2 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 300px;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+.logo {
+  max-width: 75%;
+  display: inline-block;
+}
+
+/* ── Misc ────────────────────────────────── */
+
+.highlight {
+  display: inline-flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.youtube {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: auto;
+  max-width: 500px;
+  display: block;
+  position: relative;
+  overflow: visible;
+}
+
+/* ── Node overrides ──────────────────────── */
+
+#w-node-_45214af8-2466-0e69-b2c1-88a514149ff7-9df62878 {
+  place-self: auto;
+}
+
+#w-node-_43133be8-36b5-8543-ccd7-4ab26d07dd3a-9df62878 {
+  place-self: center start;
+}
+
+#w-node-_79197f03-8d3c-00fd-e6c4-0c20079a89d2-9df62878,
+#w-node-_70e3d4ec-1435-59e0-a260-740d2bf17a04-9df62878 {
+  align-self: center;
+}
+
+/* ── Responsive ──────────────────────────── */
+
+@media screen and (max-width: 991px) {
+  .image-2 {
+    width: 100%;
+    height: auto;
+  }
+
+  .div-block-4 {
+    display: block;
+    width: auto;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section-2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .image-2 {
+    width: 50%;
+    height: auto;
+  }
+
+  .div-block {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-4 {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .button.spotify,
+  .button.bandcamp,
+  .button.soundcloud,
+  .button.instagram {
+    height: 50px;
+  }
+
+  .buttons {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .button-2,
+  .button-3 {
+    height: 50px;
+  }
+
+  .image-2 {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .section-3 {
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+
+  .text-block-2 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .div-block-2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .heading-3 {
+    margin-right: 10px;
+    padding-bottom: 5px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .div-block-4 {
+    box-sizing: border-box;
+  }
+
+  .section-4 {
+    padding-top: 20px;
+    display: block;
+  }
+
+  .div-block-5 {
+    display: block;
+  }
+}
