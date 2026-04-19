@@ -1,0 +1,348 @@
+/* ============================================
+   HUXWELL – huxwell.css
+   Cleaned: Webflow boilerplate removed
+   ============================================ */
+
+/* ── Reset ───────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+h1 { margin-top: 20px; font-size: 38px; line-height: 44px; }
+h2 { margin-top: 20px; font-size: 32px; line-height: 36px; }
+h3 { margin-top: 20px; font-size: 24px; line-height: 30px; }
+h4 { margin-top: 10px; font-size: 18px; line-height: 24px; }
+h5 { margin-top: 10px; font-size: 14px; line-height: 20px; }
+h6 { margin-top: 10px; font-size: 12px; line-height: 18px; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+/* ── Fonts ───────────────────────────────── */
+
+/* Oswald + Bodoni Moda loaded via <link> in HTML */
+
+/* ── Layout helpers ──────────────────────── */
+
+.w-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #3898ec;
+  border: 0;
+  border-radius: 0;
+  padding: 9px 15px;
+  text-decoration: none;
+  display: inline-block;
+  line-height: inherit;
+}
+
+/* ── Body background ─────────────────────── */
+
+.body {
+  background-image: url("../images/background.jpg");
+  background-position: 0 0;
+  background-size: auto;
+}
+
+/* ── Typography ──────────────────────────── */
+
+.text-block {
+  color: #fff;
+  text-align: center;
+  font-family: 'Bodoni Moda', sans-serif;
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 400;
+  display: inline-flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: baseline;
+}
+
+.heading {
+  color: #fff;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.heading-2 {
+  color: #fff;
+}
+
+.heading-3 {
+  color: #fff;
+  margin-left: 10px;
+}
+
+.text-block-2 {
+  color: #fff;
+}
+
+/* ── Buttons ─────────────────────────────── */
+
+.button {
+  text-align: center;
+  background-color: #629aa9;
+  font-family: 'Oswald', sans-serif;
+  display: inline-block;
+}
+
+.button.spotify {
+  background-color: #1db954;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.button.bandcamp {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+/* Apple Music */
+.button-2 {
+  text-align: center;
+  background-color: #fd1d1d;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+/* Soundcloud */
+.button-3 {
+  text-align: center;
+  background-color: #ff8700;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+}
+
+/* ── Sections ────────────────────────────── */
+
+/* Streaming links row */
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  margin: 10px;
+}
+
+/* Latest release – artwork + text */
+.section-2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  margin-top: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Text content inside release */
+.section-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}
+
+/* Contact */
+.section-4 {
+  /* padding added on mobile – see media queries */
+}
+
+/* ── Blocks ──────────────────────────────── */
+
+.div-block {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.div-block-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}
+
+.div-block-3 {
+  height: 300px;
+  padding: 15px;
+}
+
+/* ── Images ──────────────────────────────── */
+
+.image,
+.links {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.image-2 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 300px;
+  padding: 20px;
+  vertical-align: baseline;
+}
+
+.logo {
+  max-width: 75%;
+  display: inline-block;
+}
+
+/* ── Misc ────────────────────────────────── */
+
+.highlight {
+  display: inline-flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.youtube {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: auto;
+  max-width: 500px;
+  display: block;
+  position: relative;
+  overflow: visible;
+}
+
+/* ── Responsive ──────────────────────────── */
+
+@media screen and (max-width: 991px) {
+  .image-2 {
+    width: 100%;
+    height: auto;
+  }
+
+  .div-block-4 {
+    display: block;
+    width: auto;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section-2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .image-2 {
+    width: 50%;
+    height: auto;
+  }
+
+  .div-block {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-4 {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .button.spotify,
+  .button.bandcamp {
+    height: 50px;
+  }
+
+  .section {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .button-2,
+  .button-3 {
+    height: 50px;
+  }
+}
