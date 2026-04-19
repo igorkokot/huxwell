@@ -33,7 +33,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Bodoni+Moda:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
-  <link href="css/huxwell-da8acd.webflow.shared.76e5e0f30.css" rel="stylesheet" type="text/css" />
+  <link href="css/huxwell.css" rel="stylesheet" type="text/css" />
 
   <!-- Schema.org structured data (SEO bonus) -->
   <script type="application/ld+json">
