@@ -227,7 +227,8 @@ a:active, a:hover {
 
 /* Contact */
 .section-4 {
-  margin: 10px;
+   margin: 10px;
+   padding-bottom: 10px;
 }
 
 /* ── Blocks ──────────────────────────────── */
